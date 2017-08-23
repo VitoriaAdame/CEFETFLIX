@@ -1,0 +1,125 @@
+<!doctype html>
+<html>
+<head>
+	<script src="./js/jquery.min.js"></script>
+	<script src="./js/filmes.js"></script>
+	<script>
+		$(function(){
+			$.each(filmes, function(indice, movie){
+				var $divOpinioes=$("<div />")
+					.addClass("opinioes");
+				
+				var $ul=$("<ul />")
+					.addClass("tit-semelhante");
+				
+				$.each(movie.opinioes, function(i, opiniao){
+					$divOpinioes
+						.append(
+							$("<p />")
+							.text(opiniao.rating)
+							.append(
+								$("<p />")
+								.text(opiniao.descricao)
+							)
+						);	
+							
+				});
+				
+				$.each(movie.titulosSemelhantes, function(i, tituloSemelhante){
+					$ul
+						.append(
+							$("<li />")
+							.text(tituloSemelhante)
+							
+						);
+				});
+				
+				$(".catalogo")
+					.append($("<div />")
+						.addClass("filme")
+						.append(
+							$("<img />")
+							.attr("src", movie.figura)
+						)
+						.append(
+							$("<h2 />")
+							.text(movie.titulo)
+						)
+						.append(
+							$("<p />")
+							.attr("id","genero")
+							.text(movie.generos)
+						)
+						.append(
+							$("<p />")
+							.attr("id","classificacao")
+							.text(movie.classificacao)
+						)
+						.append(
+							$("<p />")
+							.attr("id","resumo")
+							.text(movie.resumo)
+						)
+						.append(
+							$("<p />")
+							.attr("id","elenco")
+							.text(movie.elenco)
+						)
+						.append(
+						
+							$divOpinioes
+							
+						)
+						.append(
+							
+						)
+						
+						
+						
+					);
+			
+			
+			
+			
+			
+			
+			
+			});
+		
+		
+		});
+	</script>
+	<style>
+		.filme{
+			width:345px;
+			float:left;
+		}
+	</style>
+</head>
+<body>
+	<h1>CEFETFLIX</h1>
+	<div class="catalogo">
+		<div class="filme">
+			<img src="http:\/\/botanicapp.com.br\/img\/betterCallSaul.jpg"/>
+			<h2>Better Call Saul</h2>
+			<p><strong>Gêneros:</strong>S\u00e9ries, S\u00e9ries dos EUA, S\u00e9ries C\u00f4micas, S\u00e9ries Dram\u00e1ticas</p>
+			<p><strong>Classificação:</strong>18</p>
+			<p>
+				Jimmy era um advogado qualquer at\u00e9 a vida o transformar em Saul, o cara que coloca criminosos dentro da lei.
+			</p>
+			<p>
+				<strong>Elenco:</strong> Bob Odenkirk, Jonathan Banks, Michael McKean, Rhea Seehorn
+			</p>
+			<div>
+				<h3>Opiniões:</h3>
+				<p>
+					Rating:5<br/>
+					Descrição:
+					"Estou ansioso pelos pr\u00f3ximos epis\u00f3dios. Sou f\u00e3 de Breaking Bad e estou confiante que essa s\u00e9rie ser\u00e1 um grande sucesso."
+				</p>	
+			</div>
+			
+		</div>
+	</div>
+</body>
+</html>
