@@ -1,27 +1,60 @@
 .titulo{
+
 	text-align:center;
-	font-family: 'Old Standard TT', serif;
+	font-family: 'Quicksand', sans-serif;
+	font-size: 85px;
+	font-style:bold;
+	color:#B22222;
 }
+
 .filme{
+
 	padding-top: 15px;
 	width:800px;
 	margin: 0 auto;
 	text-align:center;
-	 background-color: rgba(255, 255, 255, 0.4);
-	
-	
+	background-color: rgba(255, 255, 255, 0.4);
 }
+	
 
+	
 .img{
+
 	width:800px;
+	border-radius:20px;
+	font-family: 'Dosis', sans-serif;
+
 }
 
 body{
-	background-image: url("http://beabadanutricao.com.br/wp-content/uploads/2016/07/o-POPCORN-facebook.jpg");
+
+	background-image: url("https://vitormarx.files.wordpress.com/2016/07/pipoca.jpg");
 	background-size:100%;
 	background-repeat:no-repeat;
 	background-attachment:fixed;
+	font-family: 'Quicksand', sans-serif;
+	
+
 }
+
+
 .tit-semelhante{
+
 	list-style:none;
+	text-align:center;
+	
+
 }
+
+.classificacao{
+	border: solid 2px;
+	border-radius:5px;
+	width: 50px;
+	text-align:center;
+	margin: 0 auto;
+}
+
+
+
+
+
