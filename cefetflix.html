@@ -3,6 +3,8 @@
 <head>
 	<script src="./js/jquery.min.js"></script>
 	<script src="./js/filmes.js"></script>
+	<link rel="stylesheet" type="text/css" href="filmes.css"/>
+	<link href="https://fonts.googleapis.com/css?family=Old+Standard+TT" rel="stylesheet">
 	<script>
 		$(function(){
 			$.each(filmes, function(indice, movie){
@@ -26,21 +28,23 @@
 				});
 				
 				$.each(movie.titulosSemelhantes, function(i, tituloSemelhante){
-					$ul
-						.append(
-							$("<li />")
-							.text(tituloSemelhante)
-							
-						);
+					$ul.append(
+						$("<li/>").text(filmes[tituloSemelhante-1].titulo)
+					)
+					
 				});
 				
 				$(".catalogo")
-					.append($("<div />")
-						.addClass("filme")
+				  
+				  .addClass("filme")
 						.append(
 							$("<img />")
+							.addClass("img")
 							.attr("src", movie.figura)
 						)
+					.append($("<div />")
+						.addClass("filme")
+						
 						.append(
 							$("<h2 />")
 							.text(movie.titulo)
@@ -71,7 +75,7 @@
 							
 						)
 						.append(
-							
+							$ul
 						)
 						
 						
@@ -89,36 +93,12 @@
 		
 		});
 	</script>
-	<style>
-		.filme{
-			width:345px;
-			float:left;
-		}
-	</style>
+
 </head>
 <body>
-	<h1>CEFETFLIX</h1>
+	<h1 class="titulo">CEFETFLIX</h1>
 	<div class="catalogo">
 		<div class="filme">
-			<img src="http:\/\/botanicapp.com.br\/img\/betterCallSaul.jpg"/>
-			<h2>Better Call Saul</h2>
-			<p><strong>Gêneros:</strong>S\u00e9ries, S\u00e9ries dos EUA, S\u00e9ries C\u00f4micas, S\u00e9ries Dram\u00e1ticas</p>
-			<p><strong>Classificação:</strong>18</p>
-			<p>
-				Jimmy era um advogado qualquer at\u00e9 a vida o transformar em Saul, o cara que coloca criminosos dentro da lei.
-			</p>
-			<p>
-				<strong>Elenco:</strong> Bob Odenkirk, Jonathan Banks, Michael McKean, Rhea Seehorn
-			</p>
-			<div>
-				<h3>Opiniões:</h3>
-				<p>
-					Rating:5<br/>
-					Descrição:
-					"Estou ansioso pelos pr\u00f3ximos epis\u00f3dios. Sou f\u00e3 de Breaking Bad e estou confiante que essa s\u00e9rie ser\u00e1 um grande sucesso."
-				</p>	
-			</div>
-			
 		</div>
 	</div>
 </body>
